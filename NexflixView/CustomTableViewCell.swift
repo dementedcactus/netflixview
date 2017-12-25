@@ -13,11 +13,13 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    // data
+    // example data
     var images  = [[#imageLiteral(resourceName: "4-up on 11-17-17 at 9.43 PM (compiled)"), #imageLiteral(resourceName: "4-up on 11-17-17 at 8.46 PM #5 (compiled)"), #imageLiteral(resourceName: "4-up on 11-17-17 at 9.44 PM #5 (compiled)")], [#imageLiteral(resourceName: "4-up on 11-17-17 at 9.43 PM (compiled)"), #imageLiteral(resourceName: "4-up on 11-17-17 at 9.45 PM (compiled)"), #imageLiteral(resourceName: "4-up on 11-17-17 at 9.44 PM (compiled)"), #imageLiteral(resourceName: "4-up on 11-17-17 at 8.47 PM (compiled)"), #imageLiteral(resourceName: "4-up on 11-17-17 at 9.44 PM (compiled)")], [#imageLiteral(resourceName: "4-up on 11-17-17 at 8.46 PM #5 (compiled)"), #imageLiteral(resourceName: "4-up on 11-17-17 at 9.43 PM (compiled)")]]
     
+    //Set a standard global scope spacing for your cells to refer too
     let cellSpacing:CGFloat = 10.0
     
+    //I have no idea what this does
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
