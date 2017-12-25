@@ -32,7 +32,7 @@ class CustomTableViewCell: UITableViewCell {
         cell.collectionView.tag = indexPath.row
         
         
-    
+        //This is a good place to setup your headers for your tableCells. For example, Categories of BestSellers is an Array that you can iterate through using indexPath.row to populate this Label.
         cell.headerTitle.text = "This is Row \(indexPath.row)"
     }
 }
@@ -46,7 +46,7 @@ extension CustomTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! CustomCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCellID", for: indexPath) as! CustomCollectionViewCell
         
         // here we use the tag to access the correct index in the matrix of our data
         // e.g tag = 0, 1, 2, ...or the relavant index in the array

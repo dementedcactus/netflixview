@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    // data model
+    // example data model
     let dataModelArray = ["Data1", "Data2", "Data3"]
     
     override func viewDidLoad() {
@@ -29,9 +29,11 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! CustomTableViewCell
-        cell.configureCollectionView(forCell: cell, forIndexPath: indexPath)
-        return cell
+        let thisTableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCellID", for: indexPath) as! CustomTableViewCell
+        
+        thisTableViewCell.configureCollectionView(forCell: thisTableViewCell, forIndexPath: indexPath)
+        
+        return thisTableViewCell
     }
 }
 
